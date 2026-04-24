@@ -36,8 +36,8 @@ export const translations = {
         `Trabajo con Python, Java, C#, TypeScript y JavaScript. En el frontend manejo React, Angular y Vue.js. 
           Siempre busco aplicar las mejores practicas: Docker, CI/CD y analisis de calidad con SonarCloud.`,
       stats: [
-        { value: '6+', label: 'Proyectos' },
-        { value: '6', label: 'Lenguajes' },
+        { value: '5+', label: 'Proyectos' },
+        { value: '5', label: 'Lenguajes' },
         { value: '6', label: 'Frameworks' },
       ],
     },
@@ -127,21 +127,31 @@ export const translations = {
             'Backend del chatbot con API de OpenAI',
             'Incluye CI/CD con GitHub Actions y analisis de calidad con SonarCloud',
           ],
-          github: 'https://github.com/Mnaue8r32/ordenaya-web',
+          repositories: [
+            { name: 'Web Admin', url: 'https://github.com/Mnaue8r32/ordenaya-web' },
+            { name: 'App Movil', url: 'https://github.com/Mnaue8r32/ordenaya-mobile' },
+            { name: 'Chatbot Backend', url: 'https://github.com/Mnaue8r32/ordenaya-chatbot-api' },
+          ],
         },
         {
-          title: 'ZyBus Backend',
-          type: 'Backend',
+          title: 'ZyBus - Ecosistema Completo',
+          type: 'Full-Stack + Mobile',
           description:
-            `API REST con arquitectura Domain-Driven Design (DDD) en Python. Incluye modulos desacoplados, 
-            Value Objects, use cases, excepciones de dominio y migraciones con Alembic.`,
-          techs: ['Python', 'FastAPI', 'SQL', 'Docker', 'Alembic', 'DDD'],
+            `Sistema de transporte universitario con frontend en Vue.js, API REST en Python con DDD y app movil en React Native.
+            Proyecto de equipo universitario donde actue como Product Owner y desarrollador Full-Stack.`,
+          techs: ['Vue.js', 'Python', 'FastAPI', 'React Native', 'Expo', 'SQL', 'Docker'],
           highlights: [
-            'Arquitectura DDD profesional',
+            'Rol de Product Owner y desarrollador Full-Stack en equipo universitario',
+            'Backend con arquitectura DDD: Value Objects, use cases y excepciones de dominio',
+            'Frontend Vue.js con componentes reutilizables',
+            'App movil React Native para pasajeros y conductores',
             'Docker + Docker Compose para despliegue',
-            'Soft delete, roles y permisos',
           ],
-          github: 'https://github.com/Mnaue8r32/backend_zybus',
+          repositories: [
+            { name: 'Backend', url: 'https://github.com/FallasDev/Zybus-Backend' },
+            { name: 'Frontend', url: 'https://github.com/FallasDev/Zybus-Frontend' },
+            { name: 'App Movil', url: 'https://github.com/FallasDev/Zybus-AppMovil' },
+          ],
         },
         {
           title: 'Facturacion Electronica',
@@ -173,7 +183,10 @@ export const translations = {
             'Docker para entorno local y despliegue consistente',
             'Incluye CI/CD con GitHub Actions y analisis de calidad con SonarCloud',
           ],
-          github: 'https://github.com/Mnaue8r32/pos-jms-frontend',
+          repositories: [
+            { name: 'Frontend', url: 'https://github.com/Mnaue8r32/pos-jms-frontend' },
+            { name: 'Backend', url: 'https://github.com/Mnaue8r32/pos-jms-backend' },
+          ],
         },
         {
           title: 'Virtual Tour 360',
@@ -284,8 +297,8 @@ export const translations = {
         `I work with Python, Java, C#, TypeScript, and JavaScript. On the frontend I use React, Angular, and Vue.js. 
         I always aim to apply best practices: Docker, CI/CD, and quality analysis with SonarCloud.`,
       stats: [
-        { value: '6+', label: 'Projects' },
-        { value: '6', label: 'Languages' },
+        { value: '5+', label: 'Projects' },
+        { value: '5', label: 'Languages' },
         { value: '6', label: 'Frameworks' },
       ],
     },
@@ -375,21 +388,31 @@ export const translations = {
             'Chatbot backend with OpenAI API',
             'Includes CI/CD with GitHub Actions and quality analysis with SonarCloud',
           ],
-          github: 'https://github.com/Mnaue8r32/ordenaya-web',
+          repositories: [
+            { name: 'Web Admin', url: 'https://github.com/Mnaue8r32/ordenaya-web' },
+            { name: 'Mobile App', url: 'https://github.com/Mnaue8r32/ordenaya-mobile' },
+            { name: 'Chatbot Backend', url: 'https://github.com/Mnaue8r32/ordenaya-chatbot-api' }
+          ],
         },
         {
-          title: 'ZyBus Backend',
-          type: 'Backend',
+          title: 'ZyBus - Complete Ecosystem',
+          type: 'Full-Stack + Mobile',
           description:
-            `REST API with Domain-Driven Design (DDD) architecture in Python. Includes decoupled modules, 
-            Value Objects, use cases, domain exceptions, and Alembic migrations.`,
-          techs: ['Python', 'FastAPI', 'SQL', 'Docker', 'Alembic', 'DDD'],
+            `University transportation system with a Vue.js frontend, Python REST API following DDD, and a React Native mobile app.
+            Team university project where I acted as Product Owner and Full-Stack developer.`,
+          techs: ['Vue.js', 'Python', 'FastAPI', 'React Native', 'Expo', 'SQL', 'Docker'],
           highlights: [
-            'Professional DDD architecture',
+            'Product Owner and Full-Stack developer role in a university team project',
+            'Backend with DDD architecture: Value Objects, use cases, and domain exceptions',
+            'Vue.js frontend with reusable components',
+            'React Native mobile app for passengers and drivers',
             'Docker + Docker Compose deployment',
-            'Soft delete, roles, and permissions',
           ],
-          github: 'https://github.com/Mnaue8r32/backend_zybus',
+          repositories: [
+            { name: 'Backend', url: 'https://github.com/FallasDev/Zybus-Backend' },
+            { name: 'Frontend', url: 'https://github.com/FallasDev/Zybus-Frontend' },
+            { name: 'Mobile App', url: 'https://github.com/FallasDev/Zybus-AppMovil' },
+          ],
         },
         {
           title: 'Electronic Invoicing',
@@ -421,7 +444,10 @@ export const translations = {
             'Docker for consistent local and deployment environment',
             'Includes CI/CD with GitHub Actions and quality analysis with SonarCloud',
           ],
-          github: 'https://github.com/Mnaue8r32/pos-jms-frontend',
+          repositories: [ 
+            { name: 'Frontend', url: 'https://github.com/Mnaue8r32/pos-jms-frontend' },
+            { name: 'Backend', url: 'https://github.com/Mnaue8r32/pos-jms-backend' }
+          ],
         },
         {
           title: 'Virtual Tour 360',

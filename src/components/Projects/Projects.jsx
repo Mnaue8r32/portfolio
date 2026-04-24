@@ -21,7 +21,7 @@ export default function Projects() {
 
                 <div className="projects__grid">
                     {projects.map((project, i) => (
-                        <ProjectCard key={project.title} project={project} index={i} openInGithubLabel={t.projects.openInGithub} />
+                        <ProjectCard key={project.title} project={project} index={i} />
                     ))}
                 </div>
             </div>

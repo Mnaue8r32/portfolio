@@ -4,26 +4,16 @@ import { TECH_COLORS } from '../../utils/techColors';
 import { TECH_ICONS } from '../../utils/techIcons';
 import './ProjectCard.css';
 
-const ProjectCard = memo(function ProjectCard({ project, index, openInGithubLabel }) {
+const ProjectCard = memo(function ProjectCard({ project, index }) {
     const featured = index === 0;
-    const githubAriaLabel = openInGithubLabel.replace('{title}', project.title);
+    const repos = project.repositories
+        || (project.github ? [{ name: 'GitHub', url: project.github }] : null);
 
     return (
         <article className={`project-card ${featured ? 'project-card--featured' : ''} reveal reveal-delay-${(index % 4) + 1}`}>
             <div className="project-card__inner">
                 <div className="project-card__header">
                     <span className="project-card__type">{project.type}</span>
-                    <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-card__link"
-                        aria-label={githubAriaLabel}
-                    >
-                        <svg className="icon" width="18" height="18" aria-hidden="true" style={{ stroke: 'currentColor', fill: 'none', strokeWidth: '2' }}>
-                            <use href="/sprite.svg#icon-arrow-external" />
-                        </svg>
-                    </a>
                 </div>
 
                 <h3 className="project-card__title">{project.title}</h3>
@@ -57,6 +47,26 @@ const ProjectCard = memo(function ProjectCard({ project, index, openInGithubLabe
                         ))}
                     </ul>
                 ) : null}
+
+                {repos && (
+                    <div className="project-card__repos">
+                        {repos.map((repo) => (
+                            <a
+                                key={repo.name}
+                                href={repo.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="project-card__repo-link"
+                                aria-label={`${repo.name} on GitHub`}
+                            >
+                                <svg width="13" height="13" aria-hidden="true" style={{ stroke: 'currentColor', fill: 'none', strokeWidth: '2', flexShrink: 0 }}>
+                                    <use href="/sprite.svg#icon-arrow-external" />
+                                </svg>
+                                {repo.name}
+                            </a>
+                        ))}
+                    </div>
+                )}
             </div>
         </article>
     );
@@ -69,10 +79,15 @@ ProjectCard.propTypes = {
         description: PropTypes.string.isRequired,
         techs: PropTypes.arrayOf(PropTypes.string).isRequired,
         highlights: PropTypes.arrayOf(PropTypes.string),
-        github: PropTypes.string.isRequired,
+        github: PropTypes.string,
+        repositories: PropTypes.arrayOf(
+            PropTypes.shape({
+                name: PropTypes.string.isRequired,
+                url: PropTypes.string.isRequired,
+            })
+        ),
     }).isRequired,
     index: PropTypes.number.isRequired,
-    openInGithubLabel: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;
